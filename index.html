@@ -1,8 +1,53 @@
-<!-- rebuild test -->
 <!DOCTYPE html>
 
 <html lang="en">
 <head>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="cig_nav_icon.png"/>
+
+  <!-- Primary Meta Tags -->
+  <title>Chavan Industrial Group | Railways, Defence & Engineering</title>
+  <meta name="title" content="Chavan Industrial Group | Railways, Defence & Engineering">
+  <meta name="description" content="Chavan Industrial Group (CIG) delivers precision supplies, turnkey projects, and engineering services for Indian Railways, Defence, and national infrastructure.">
+  <meta name="keywords" content="Chavan Industrial Group, CIG, Indian Railways supplier, Defence projects, turnkey engineering, logistics, infrastructure, manufacturing, Pune, Maharashtra">
+  <meta name="author" content="Chavan Industrial Group">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://chavanindustrialgroup.com/">
+  <meta property="og:title" content="Chavan Industrial Group | Railways, Defence & Engineering">
+  <meta property="og:description" content="Trusted partner to Indian Railways, Defence, and national institutions — delivering engineering excellence and turnkey projects.">
+  <meta property="og:image" content="cig_nav_icon.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://chavanindustrialgroup.com/">
+  <meta property="twitter:title" content="Chavan Industrial Group | Railways, Defence & Engineering">
+  <meta property="twitter:description" content="Trusted partner to Indian Railways, Defence, and national institutions — delivering engineering excellence and turnkey projects.">
+  <meta property="twitter:image" content="cig_nav_icon.png">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Chavan Industrial Group",
+    "url": "https://chavanindustrialgroup.com/",
+    "logo": "https://chavanindustrialgroup.com/cig_nav_icon.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-9876540524",
+      "contactType": "Customer Service"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/chavanindustrialgroup",
+      "https://www.facebook.com/chavanindustrialgroup",
+      "https://twitter.com/chavanindustrialgroup"
+    ]
+  }
+  </script>
+
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Chavan Industrial Group</title>
@@ -967,34 +1012,22 @@ img, svg{ max-width: 100%; height: auto; }
   *{ animation: none !important; transition: none !important; }
 }
 
-
-/* Slider fix: keep slides clipped and sized */
-.case-studies-section, .testimonials-section { overflow: hidden; position: relative; }
-.case-studies-wrapper, .testimonials-wrapper { width: 100%; }
-.case-nav, .testimonial-nav { display: flex; gap: 10px; justify-content: center; align-items: center; }
-.case-nav button, .testimonial-nav button { width: 10px; height: 10px; border-radius: 50%; border: 2px solid var(--gold-light); background: transparent; opacity: .7; }
-.case-nav button.active, .testimonial-nav button.active { background: var(--gold-light); opacity: 1; }
-
-
-/* Bulletproof slider viewport */
-.slider-viewport{ overflow:hidden; width:100%; position:relative; }
-.case-studies-wrapper, .testimonials-wrapper{ display:flex; transition: transform 0.5s ease; will-change: transform; }
-.case-slide, .testimonial{ flex: 0 0 100%; min-width: 100%; }
-
-/* Safety: keep content visible even if JS fails */
-.reveal-on-scroll{opacity:1 !important; transform:none !important;}
-
-/* Visibility-first layout: stack slides vertically so they always show */
-.case-studies-section .slider-viewport,
-.testimonials-section .slider-viewport{ overflow: visible; }
-.case-studies-wrapper, .testimonials-wrapper{
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 32px;
-  transform: none !important;
+/* === CIG: Mobile navbar rules (only two icons: logo left, hamburger right) === */
+.theme-toggle-item{ display:none; }
+@media (max-width: 1024px){
+  #themeToggle{ display:none !important; }           /* Hide desktop sun/moon */
+  .theme-toggle-item{ display:block; }               /* Show Theme inside menu list */
+  .navbar{ justify-content: space-between; }
+  .navbar .logo{ order:0; }
+  .nav-toggle{ order:1; margin-left:auto; display:inline-flex; }
 }
-.case-slide, .testimonial{ min-width: 0; width: 100%; }
-.case-nav, .testimonial-nav{ display:none; } /* hide dots since stacking */
+
+
+/* --- Strong fallback so the mobile menu definitely opens --- */
+@media (max-width: 1024px){
+  .nav-toggle[aria-expanded="true"] + ul{ display:flex !important; }
+}
+
 </style>
 </head>
 <body>
@@ -1013,6 +1046,18 @@ img, svg{ max-width: 100%; height: auto; }
 <li><a href="#news">News</a></li>
 <li><a href="#careers">Careers</a></li>
 <li><a href="#contact">Contact</a></li>
+
+<li class="theme-toggle-item">
+  <button id="themeToggleMobile" class="theme-toggle" aria-label="Toggle theme (mobile)">
+    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+      <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/>
+    </svg>
+    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+      <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286"/>
+    </svg>
+    <span style="margin-left:10px; text-transform:uppercase; letter-spacing:1px; font-size:14px;">Theme</span>
+  </button>
+</li>
 </ul>
 <!-- Theme toggle button shows a sun icon by default; in light mode the moon icon appears -->
 <div aria-label="Toggle theme" class="theme-toggle" id="themeToggle">
@@ -1154,90 +1199,93 @@ img, svg{ max-width: 100%; height: auto; }
 </div>
 </section>
 <!-- Case Studies -->
-<section class="case-studies-section reveal-on-scroll" id="case-studies">
-<div class="container">
-<h2 class="section-title">Case Studies</h2>
-<p class="section-subtitle">Explore projects where our expertise delivered outstanding results.</p>
-</div>
-<div class="slider-viewport"><div class="case-studies-wrapper" id="caseWrapper">
-<div class="case-slide">
-<img alt="Railway Infrastructure Project" src="case1.png"/>
-<h3>Railway Modernisation</h3>
-<p>A comprehensive supply and installation project upgrading critical rail infrastructure across multiple zones.</p>
-</div>
-<div class="case-slide">
-<img alt="Defence Logistics Project" src="case2.png"/>
-<h3>Defence Logistics</h3>
-<p>Delivering precision logistics solutions for the Ministry of Defence, ensuring readiness and resilience.</p>
-</div>
-<div class="case-slide">
-<img alt="Engineering &amp; Turnkey Project" src="case3.png"/>
-<h3>Turnkey Engineering</h3>
-<p>Designing and executing turnkey projects integrating advanced technologies and sustainable materials.</p>
-</div>
-</div></div>
-<div class="case-nav" id="caseNav">
-<button aria-label="Go to slide 1" class="active" data-index="0"></button>
-<button aria-label="Go to slide 2" data-index="1"></button>
-<button aria-label="Go to slide 3" data-index="2"></button>
-</div>
-</section>
-<!-- Projects Showcase -->
-<section class="projects-section reveal-on-scroll" id="projects">
-<div class="container">
-<h2 class="section-title">Featured Projects</h2>
-<p class="section-subtitle">A glimpse into signature projects that define our capabilities.</p>
-<div class="projects-grid">
-<div class="project-card">
-<img alt="Railway Modernisation" src="case1.png"/>
-<div class="overlay">
-<h4>Railway Modernisation</h4>
-<p>Upgrading tracks, signalling and operations with leading‑edge technologies across multiple railway zones.</p>
-</div>
-</div>
-<div class="project-card">
-<img alt="Defence Logistics" src="case2.png"/>
-<div class="overlay">
-<h4>Defence Logistics</h4>
-<p>Delivering integrated logistics frameworks to support critical defence missions nationwide.</p>
-</div>
-</div>
-<div class="project-card">
-<img alt="Turnkey Engineering" src="case3.png"/>
-<div class="overlay">
-<h4>Turnkey Engineering</h4>
-<p>End‑to‑end solutions from concept to commissioning, built on a foundation of precision and innovation.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Testimonials -->
-<section class="testimonials-section reveal-on-scroll" id="testimonials">
-<div class="container">
-<h2 class="section-title">Testimonials</h2>
-<p class="section-subtitle">What our partners say about working with CIG.</p>
-</div>
-<div class="slider-viewport"><div class="testimonials-wrapper" id="testimonialWrapper">
-<div class="testimonial">
-<p>“CIG delivered timely supply chain solutions that exceeded our expectations.”</p>
-<span class="author">Indian Railways Representative</span>
-</div>
-<div class="testimonial">
-<p>“Their engineering team executed complex projects seamlessly and professionally.”</p>
-<span class="author">Ministry of Defence Official</span>
-</div>
-<div class="testimonial">
-<p>“Outstanding consultancy and support improved our operations significantly.”</p>
-<span class="author">Corporate Partner</span>
-</div>
-</div></div>
-<div class="testimonial-nav" id="testimonialNav">
-<button aria-label="Go to testimonial 1" class="active" data-index="0"></button>
-<button aria-label="Go to testimonial 2" data-index="1"></button>
-<button aria-label="Go to testimonial 3" data-index="2"></button>
-</div>
-</section>
+  <section id="case-studies" class="case-studies-section reveal-on-scroll">
+    <div class="container">
+      <h2 class="section-title">Case Studies</h2>
+      <p class="section-subtitle">Explore projects where our expertise delivered outstanding results.</p>
+    </div>
+    <div class="case-studies-wrapper" id="caseWrapper">
+      <div class="case-slide">
+        <img src="case1.png" alt="Railway Infrastructure Project">
+        <h3>Railway Modernisation</h3>
+        <p>A comprehensive supply and installation project upgrading critical rail infrastructure across multiple zones.</p>
+      </div>
+      <div class="case-slide">
+        <img src="case2.png" alt="Defence Logistics Project">
+        <h3>Defence Logistics</h3>
+        <p>Delivering precision logistics solutions for the Ministry of Defence, ensuring readiness and resilience.</p>
+      </div>
+      <div class="case-slide">
+        <img src="case3.png" alt="Engineering & Turnkey Project">
+        <h3>Turnkey Engineering</h3>
+        <p>Designing and executing turnkey projects integrating advanced technologies and sustainable materials.</p>
+      </div>
+    </div>
+    <div class="case-nav" id="caseNav">
+      <button data-index="0" class="active" aria-label="Go to slide 1"></button>
+      <button data-index="1" aria-label="Go to slide 2"></button>
+      <button data-index="2" aria-label="Go to slide 3"></button>
+    </div>
+  </section>
+
+  <!-- Projects Showcase -->
+  <section id="projects" class="projects-section reveal-on-scroll">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      <p class="section-subtitle">A glimpse into signature projects that define our capabilities.</p>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="case1.png" alt="Railway Modernisation">
+          <div class="overlay">
+            <h4>Railway Modernisation</h4>
+            <p>Upgrading tracks, signalling and operations with leading‑edge technologies across multiple railway zones.</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="case2.png" alt="Defence Logistics">
+          <div class="overlay">
+            <h4>Defence Logistics</h4>
+            <p>Delivering integrated logistics frameworks to support critical defence missions nationwide.</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="case3.png" alt="Turnkey Engineering">
+          <div class="overlay">
+            <h4>Turnkey Engineering</h4>
+            <p>End‑to‑end solutions from concept to commissioning, built on a foundation of precision and innovation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="testimonials-section reveal-on-scroll">
+    <div class="container">
+      <h2 class="section-title">Testimonials</h2>
+      <p class="section-subtitle">What our partners say about working with CIG.</p>
+    </div>
+    <div class="testimonials-wrapper" id="testimonialWrapper">
+      <div class="testimonial">
+        <p>“CIG delivered timely supply chain solutions that exceeded our expectations.”</p>
+        <span class="author">Indian Railways Representative</span>
+      </div>
+      <div class="testimonial">
+        <p>“Their engineering team executed complex projects seamlessly and professionally.”</p>
+        <span class="author">Ministry of Defence Official</span>
+      </div>
+      <div class="testimonial">
+        <p>“Outstanding consultancy and support improved our operations significantly.”</p>
+        <span class="author">Corporate Partner</span>
+      </div>
+    </div>
+    <div class="testimonial-nav" id="testimonialNav">
+      <button data-index="0" class="active" aria-label="Go to testimonial 1"></button>
+      <button data-index="1" aria-label="Go to testimonial 2"></button>
+      <button data-index="2" aria-label="Go to testimonial 3"></button>
+    </div>
+  </section>
+  
 <!-- Partners -->
 <section class="partners-section reveal-on-scroll" id="partners">
 <div class="container">
@@ -1359,5 +1407,211 @@ img, svg{ max-width: 100%; height: auto; }
 <path d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5" fill-rule="evenodd"></path>
 </svg>
 </div>
+<script>
+    // All interactive behaviours are handled after the DOM is ready
+    document.addEventListener('DOMContentLoaded', function() {
+      /* Scroll reveal: animate sections into view */
+      const revealObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('reveal');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+        revealObserver.observe(el);
+      });
+
+      /* Animated stats counters */
+      const statObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const target = parseInt(el.getAttribute('data-target'));
+            let current = 0;
+            const step = Math.max(1, Math.floor(target / 200));
+            function updateCounter() {
+              current += step;
+              if (current >= target) {
+                el.textContent = target;
+              } else {
+                el.textContent = current;
+                requestAnimationFrame(updateCounter);
+              }
+            }
+            updateCounter();
+            statObserver.unobserve(el);
+          }
+        });
+      }, { threshold: 0.7 });
+      document.querySelectorAll('.stat-number').forEach(num => statObserver.observe(num));
+
+      /* Case studies slider navigation */
+      const caseWrapper = document.getElementById('caseWrapper');
+      const caseNavButtons = document.querySelectorAll('#caseNav button');
+      caseNavButtons.forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+          caseWrapper.style.transform = `translateX(-${index * 100}%)`;
+          caseNavButtons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+        });
+      });
+
+      /* Testimonials slider navigation */
+      const testimonialWrapper = document.getElementById('testimonialWrapper');
+      const testimonialNavButtons = document.querySelectorAll('#testimonialNav button');
+      testimonialNavButtons.forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+          testimonialWrapper.style.transform = `translateX(-${index * 100}%)`;
+          testimonialNavButtons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+        });
+      });
+
+      /* Back to top visibility and behaviour */
+      const backToTop = document.getElementById('backToTop');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) {
+          backToTop.classList.add('show');
+        } else {
+          backToTop.classList.remove('show');
+        }
+      });
+      backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      
+      /* Theme toggle (dark <-> light) with persistence and mobile support */
+      const applyTheme = (mode) => {
+        if (mode === 'light') {
+          document.body.classList.add('light-theme');
+        } else {
+          document.body.classList.remove('light-theme');
+        }
+      };
+      // default to dark unless user explicitly saved light
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+      applyTheme(savedTheme);
+
+      const themeToggle = document.getElementById('themeToggle');
+      const themeToggleMobile = document.getElementById('themeToggleMobile');
+
+      function flipTheme() {
+        const isLight = document.body.classList.toggle('light-theme');
+        localStorage.setItem('theme', isLight ? 'light' : 'dark');
+      }
+
+      if (themeToggle) themeToggle.addEventListener('click', flipTheme);
+      if (themeToggleMobile) themeToggleMobile.addEventListener('click', flipTheme);
+
+
+      /* Project card click to toggle overlay on mobile */
+      document.querySelectorAll('.project-card').forEach(card => {
+        card.addEventListener('click', () => {
+          card.classList.toggle('active');
+        });
+      });
+    });
+  
+/* === Mobile menu + safety === */
+const nav = document.querySelector('.navbar');
+const navBtn = document.querySelector('.nav-toggle');
+if (nav && navBtn){
+  navBtn.addEventListener('click', () => {
+    const opened = nav.classList.toggle('open');
+    navBtn.setAttribute('aria-expanded', opened ? 'true' : 'false');
+  });
+  // Close on link click
+  nav.querySelectorAll('ul a').forEach(a => {
+    a.addEventListener('click', () => { nav.classList.remove('open'); navBtn.setAttribute('aria-expanded','false'); });
+  });
+  // Close on escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') { nav.classList.remove('open'); navBtn.setAttribute('aria-expanded','false'); }
+  });
+  // Close if resized to desktop
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 1024) { nav.classList.remove('open'); navBtn.setAttribute('aria-expanded','false'); }
+  });
+}
+</script>
+
+<script>
+// === CIG: Navbar hamburger ===
+(function(){
+  const navbar = document.querySelector('.navbar');
+  const toggle = document.querySelector('.nav-toggle');
+  if (toggle && navbar) {
+    toggle.addEventListener('click', () => {
+      const open = navbar.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+  }
+})();
+
+// === CIG: Theme handling (desktop + mobile) ===
+(function(){
+  const root = document.body;
+  const desktopBtn = document.getElementById('themeToggle');
+  const mobileBtn = document.getElementById('themeToggleMobile');
+
+  function applyTheme(t){
+    if(t === 'light'){ root.classList.add('light-theme'); }
+    else{ root.classList.remove('light-theme'); }
+  }
+  function current(){ return root.classList.contains('light-theme') ? 'light' : 'dark'; }
+  function toggleTheme(){
+    const t = current() === 'light' ? 'dark' : 'light';
+    localStorage.setItem('cig-theme', t);
+    applyTheme(t);
+  }
+  // initial
+  applyTheme(localStorage.getItem('cig-theme') || 'dark');
+  // bind
+  if (desktopBtn) desktopBtn.addEventListener('click', toggleTheme);
+  if (mobileBtn) mobileBtn.addEventListener('click', toggleTheme);
+})();
+</script>
+
+
+<script>
+(function(){
+  const btn = document.querySelector('.nav-toggle');
+  const ul = btn ? btn.nextElementSibling : null;
+  const navbar = document.querySelector('.navbar');
+  if (!btn || !ul || !navbar) return;
+  function setOpen(open){
+    navbar.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', String(open));
+    if (window.matchMedia('(max-width: 1024px)').matches){
+      ul.style.display = open ? 'flex' : 'none';
+    } else {
+      ul.style.display = '';
+    }
+  }
+  btn.addEventListener('click', (e)=>{
+    e.preventDefault();
+    const open = btn.getAttribute('aria-expanded') !== 'true';
+    setOpen(open);
+  });
+  // Close menu when a link is clicked (mobile)
+  ul.addEventListener('click', (e)=>{
+    if (e.target.tagName === 'A'){
+      setOpen(false);
+    }
+  });
+  // Reset on resize
+  window.addEventListener('resize', ()=>{
+    if (!window.matchMedia('(max-width: 1024px)').matches){
+      ul.style.display='';
+      navbar.classList.remove('open');
+      btn.setAttribute('aria-expanded','false');
+    }
+  });
+})();
+</script>
+
 </body>
 </html>
