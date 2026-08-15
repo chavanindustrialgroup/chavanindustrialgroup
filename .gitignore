@@ -1,0 +1,16 @@
+# Large local binaries not part of the website
+OpenCode Desktop Installer.exe
+
+# Unused duplicate assets (site references only the root copies)
+assets/
+
+# OS / editor noise
+Thumbs.db
+.DS_Store
+desktop.ini
+*.swp
+.idea/
+.vscode/
+
+# Logs / temp
+*.log
