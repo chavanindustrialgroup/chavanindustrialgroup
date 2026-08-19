@@ -6,7 +6,7 @@
   <title>Chavan Industrial Group | Engineering Excellence for Railways, Defence &amp; Infrastructure</title>
 
   <meta name="description" content="Chavan Industrial Group (CIG) delivers precision manufacturing, turnkey projects and industrial supply for Indian Railways, Defence and national infrastructure. Trusted engineering, delivered on time.">
-  <meta name="keywords" content="Chavan Industrial Group, CIG, Indian Railways supplier, Defence projects, turnkey engineering, precision manufacturing, logistics, infrastructure, Pune, Maharashtra, India">
+  <meta name="keywords" content="Chavan Industrial Group, CIG, Shubhankar Chavan, Indian Railways supplier, Defence projects, turnkey engineering, precision manufacturing, logistics, infrastructure, Ahilyanagar, Maharashtra, India">
   <meta name="author" content="Chavan Industrial Group">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#f6f1e6">
@@ -19,12 +19,12 @@
   <meta property="og:site_name" content="Chavan Industrial Group">
   <meta property="og:title" content="Chavan Industrial Group | Engineering Excellence for Critical Sectors">
   <meta property="og:description" content="Precision manufacturing, turnkey projects and industrial supply for Indian Railways, Defence and national infrastructure.">
-  <meta property="og:image" content="cig_nav_icon.png">
+  <meta property="og:image" content="https://chavanindustrialgroup.com/cig_nav_icon.png">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Chavan Industrial Group | Engineering Excellence">
   <meta name="twitter:description" content="Precision manufacturing, turnkey projects and industrial supply for Indian Railways, Defence and national infrastructure.">
-  <meta name="twitter:image" content="cig_nav_icon.png">
+  <meta name="twitter:image" content="https://chavanindustrialgroup.com/cig_nav_icon.png">
 
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
@@ -37,26 +37,51 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Chavan Industrial Group",
-    "url": "https://chavanindustrialgroup.com/",
-    "logo": "https://chavanindustrialgroup.com/cig_nav_icon.png",
-    "founder": { "@type": "Person", "name": "Shubhankar Chavan" },
-    "description": "Precision engineering, manufacturing and industrial supply solutions for Railways, Defence and Infrastructure sectors.",
-    "email": "info@chavanindustrialgroup.com",
-    "telephone": "+91-9876540524",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Manik Nagar",
-      "addressLocality": "Ahilyanagar",
-      "addressRegion": "Maharashtra",
-      "addressCountry": "IN"
-    },
-    "sameAs": [
-      "https://www.linkedin.com/company/chavanindustrialgroup",
-      "https://www.facebook.com/chavanindustrialgroup",
-      "https://twitter.com/chavanindustrialgroup",
-      "https://www.instagram.com/chavanindustrialgroup/"
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://chavanindustrialgroup.com/#organization",
+        "name": "Chavan Industrial Group",
+        "url": "https://chavanindustrialgroup.com/",
+        "logo": "https://chavanindustrialgroup.com/cig_nav_icon.png",
+        "description": "Precision engineering, manufacturing and industrial supply solutions for Railways, Defence and Infrastructure sectors.",
+        "email": "info@chavanindustrialgroup.com",
+        "telephone": "+91-9876540524",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Manik Nagar",
+          "addressLocality": "Ahilyanagar",
+          "addressRegion": "Maharashtra",
+          "addressCountry": "IN"
+        },
+        "founder": {
+          "@id": "https://chavanindustrialgroup.com/#shubhankar-chavan"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/chavanindustrialgroup",
+          "https://www.facebook.com/chavanindustrialgroup",
+          "https://twitter.com/chavanindustrialgroup",
+          "https://www.instagram.com/chavanindustrialgroup/"
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://chavanindustrialgroup.com/#shubhankar-chavan",
+        "name": "Shubhankar Chavan",
+        "url": "https://chavanindustrialgroup.com/about-founder.html",
+        "jobTitle": "Founder & CEO",
+        "worksFor": {
+          "@id": "https://chavanindustrialgroup.com/#organization"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "name": "Chavan Industrial Group",
+        "url": "https://chavanindustrialgroup.com/",
+        "publisher": {
+          "@id": "https://chavanindustrialgroup.com/#organization"
+        }
+      }
     ]
   }
   </script>
@@ -1492,7 +1517,7 @@
 
           <div class="hero-visual reveal" aria-hidden="true">
             <div class="hero-orbit"></div>
-            <img class="hero-emblem" src="cig_nav_icon.png" alt="" fetchpriority="high" decoding="async">
+            <img class="hero-emblem" src="cig_nav_icon.png" alt="Chavan Industrial Group emblem" fetchpriority="high" decoding="async">
             <div class="hero-caption">
               <strong>Chavan Industrial Group</strong>
               Engineering, manufacturing and supply for railways, defence and infrastructure.
